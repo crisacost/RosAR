@@ -12,7 +12,8 @@
     height: 400px;
 }
 
-.menu {
+.conteiner-fluid {
+    height: 50px;
     background-color: black;
     padding: 10px;
     list-style: none;
@@ -24,13 +25,17 @@
     justify-content: center;
 }
 
-.menu li a {
+.conteiner-fluid li a {
     padding: 6px;
     margin: 10px;
     color: rgb(245, 243, 241);
     text-decoration: none;
 
 
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
 }
 
 /*..........Index..........*/
@@ -482,7 +487,7 @@ h6 {
 }
 
 @media screen and (max-width: 560px) {
-    .menu {
+    .conteiner-fluid {
         background-color: white;
         padding: 5px;
         list-style: none;
@@ -494,7 +499,7 @@ h6 {
 
     }
 
-    .menu li a {
+    .conteiner-fluid li a {
         color: black;
 
     }
