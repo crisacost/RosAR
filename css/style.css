@@ -1,0 +1,327 @@
+/*.....Extends.....*/
+.conteiner-fluid, h2 .presentacion .imgc3, .museo .titulom, .museo .pfinm, .parques .titulop, .parques .pfinp {
+  display: flex;
+  justify-content: center; }
+
+h1, h4, .titulocuatro, .museo, .parques, .ptod {
+  background-color: black;
+  color: white;
+  font-style: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+/*.........Reseteo.........*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fdfbfb;
+  color: black; }
+
+main {
+  min-height: 80vh;
+  display: grid; }
+
+/*.....index.....*/
+.imgprincipal {
+  width: 100%;
+  height: 400px; }
+
+/*.....NavBS.....*/
+.conteiner-fluid {
+  height: 50px;
+  background-color: black;
+  padding: 10px;
+  list-style: none;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px; }
+  .conteiner-fluid .logo {
+    display: flex;
+    justify-content: flex-start; }
+  .conteiner-fluid .conteiner-fluid li a {
+    padding: 6px;
+    margin: 10px;
+    color: #f5f3f1;
+    text-decoration: none; }
+
+/*.....Que hacer.....*/
+.encabezado {
+  display: flex;
+  justify-content: space-evenly; }
+
+/*..............Index..............*/
+h1 {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 80px; }
+
+h2 {
+  margin: 15px;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  h2 .presentacion {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    /*...DESDE ACA GRID...*/
+    display: grid;
+    width: 100%;
+    grid-row: auto auto;
+    grid-column: 1fr 1fr 1fr;
+    grid-template-areas: "cont1 imgc1 imgc2" "cont2 imgc3 imgc3"; }
+    h2 .presentacion .cont1 {
+      grid-area: cont1; }
+    h2 .presentacion .cont2 {
+      grid-area: cont2; }
+    h2 .presentacion .imgc1 {
+      grid-area: imgc1; }
+    h2 .presentacion .imgc2 {
+      grid-area: imgc2; }
+    h2 .presentacion .imgc3 {
+      grid-area: imgc3; }
+    h2 .presentacion .pfinal {
+      text-decoration: underline; }
+
+/*...............Que hacer..............*/
+h4 {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 40px; }
+
+.titulocuatro {
+  padding: 5px;
+  padding-bottom: 15px;
+  font-size: 25px; }
+
+/*........MUSEOS........*/
+.museo {
+  font-weight: bold;
+  font-size: 30px;
+  /*...EMPIEZA GRID...*/
+  display: grid;
+  width: 100%;
+  grid-row: auto auto auto auto;
+  grid-column: 1fr 1fr;
+  grid-template-areas: "titulom imgm-1" "titulom imgm-2" "titulom imgm-3" "pfinm pfinm"; }
+  .museo .titulom {
+    grid-area: titulom;
+    height: 100%;
+    /*...COMBINACION GRID Y FLEX...*/
+    align-items: center;
+    font-size: 50px; }
+    .museo .titulom .ms1 {
+      margin: 20px; }
+  .museo .imgm-1 {
+    padding: 15px;
+    border-top: groove;
+    border-right: groove;
+    grid-area: imgm-1;
+    display: flex;
+    justify-content: flex-end; }
+  .museo .imgm-2 {
+    padding: 15px;
+    border-left: groove;
+    border-bottom: groove;
+    grid-area: imgm-2;
+    display: flex;
+    justify-content: flex-start; }
+  .museo .imgm-3 {
+    padding: 15px;
+    border-top: groove;
+    border-bottom: groove;
+    grid-area: imgm-3;
+    display: flex;
+    justify-content: flex-end; }
+  .museo .pfinm {
+    grid-area: pfinm; }
+    .museo .pfinm .muspar {
+      padding: 20px;
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: normal; }
+
+/*......PARQUES......*/
+.parques {
+  font-weight: bold;
+  font-size: 30px;
+  /*...EMPIEZA GRID...*/
+  display: grid;
+  width: 100%;
+  grid-row: auto auto auto auto;
+  grid-column: 1fr 1fr;
+  grid-template-areas: "titulop imgp-1" "titulop imgp-2" "titulop imgp-3" "pfinp pfinp"; }
+  .parques .titulop {
+    grid-area: titulop;
+    height: 100%;
+    /*...COMBINACION GRID Y FLEX...*/
+    align-items: center;
+    font-size: 50px; }
+    .parques .titulop .pr1 {
+      margin: 20px; }
+  .parques .imgp-1 {
+    padding: 15px;
+    border-top: groove;
+    border-right: groove;
+    grid-area: imgp-1;
+    display: flex;
+    justify-content: flex-end; }
+  .parques .imgp-2 {
+    padding: 15px;
+    border-left: groove;
+    border-bottom: groove;
+    grid-area: imgp-2;
+    display: flex;
+    justify-content: flex-start; }
+  .parques .imgp-3 {
+    padding: 15px;
+    border-top: groove;
+    border-bottom: groove;
+    grid-area: imgp-3;
+    display: flex;
+    justify-content: flex-end; }
+  .parques .pfinp {
+    grid-area: pfinp; }
+    .parques .pfinp .parqpar {
+      padding: 20px;
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: normal; }
+
+/*...............Recorridos...............*/
+h5 {
+  color: #070606;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 8px;
+  padding: 10px; }
+
+.ptod {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  text-align: center; }
+  .ptod .rec1 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+    text-decoration: underline; }
+  .ptod .rec11 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 15px; }
+  .ptod .imgrec {
+    margin: 25px; }
+
+/*...............Contacto...............*/
+h6 {
+  color: #070606;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.lrm {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px; }
+
+.formu {
+  margin: 20px;
+  background-color: #f7eeee;
+  padding: 10px; }
+
+/*...............Informacion...............*/
+.titu {
+  color: #070606;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.tdo1 {
+  background-color: black;
+  margin: 0;
+  padding: 10px; }
+  .tdo1 .tit1 {
+    color: aliceblue;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px; }
+  .tdo1 .rell1 {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 15px; }
+
+.tdo2 {
+  background-color: rgba(29, 29, 49, 0.87);
+  margin: 0;
+  padding: 10px; }
+  .tdo2 .tit {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px; }
+  .tdo2 .rell {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 15px; }
+
+.tdo3 {
+  background-color: black;
+  margin: 0;
+  padding: 10px; }
+
+.foot1 {
+  background-color: #1c3a3a;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px; }
+
+.foot2 {
+  background-color: #172929;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px; }
+
+@media screen and (max-width: 950px) {
+  .imgprincipal {
+    display: none; }
+  .presentacion {
+    grid-row: auto auto auto auto;
+    grid-column: 1fr 1fr;
+    grid-template-areas: "cont1 cont1" "cont2 cont2" "imgc1 imgc2" "imgc3 imgc3"; }
+  .parques {
+    grid-row: auto auto auto auto auto;
+    grid-column: 1fr;
+    grid-template-areas: "titulop"  "imgp-1" " imgp-2" " imgp-3" "pfinp"; }
+  .encabezado {
+    display: none; }
+  .museo {
+    grid-row: auto auto auto auto auto;
+    grid-column: 1fr;
+    grid-template-areas: "titulom" "imgm-1" "imgm-2" "imgm-3" "pfinm"; } }
+
+@media screen and (max-width: 560px) {
+  .conteiner-fluid {
+    background-color: white;
+    padding: 5px;
+    list-style: none;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .conteiner-fluid li a {
+    color: black; }
+  .foot1 {
+    background-color: white; }
+  .foot2 {
+    background-color: white; } }

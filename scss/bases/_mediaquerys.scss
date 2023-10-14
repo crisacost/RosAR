@@ -1,0 +1,61 @@
+@media screen and (max-width: 950px) {
+    .imgprincipal {
+        display: none;
+    }
+    .presentacion {
+        grid-row: auto auto auto auto;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+            "cont1 cont1"
+            "cont2 cont2"
+            "imgc1 imgc2"
+            "imgc3 imgc3"
+    }
+    .parques {
+        grid-row: auto auto auto auto auto;
+        grid-column: 1fr;
+        grid-template-areas:
+            "titulop" 
+            "imgp-1"
+            " imgp-2"
+            " imgp-3"
+            "pfinp"
+    }
+    .encabezado {
+        display: none
+    }
+    .museo {
+        grid-row: auto auto auto auto auto;
+        grid-column: 1fr;
+        grid-template-areas:
+            "titulom"
+            "imgm-1"
+            "imgm-2"
+            "imgm-3"
+            "pfinm"
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .conteiner-fluid {
+        background-color: white;
+        padding: 5px;
+        list-style: none;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .conteiner-fluid li a {
+        color: black;
+
+    }
+    .foot1 {
+        background-color: white;
+
+    }
+    .foot2 {
+        background-color: white;
+    }
+
+}

@@ -1,0 +1,280 @@
+/*..............Index..............*/
+h1 {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 80px;
+    @extend %base
+}
+h2 {
+    margin: 15px;
+    color: black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.presentacion {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    /*...DESDE ACA GRID...*/
+    display: grid;
+    width: 100%;
+    grid-row: auto auto;
+    grid-column: 1fr 1fr 1fr;
+    grid-template-areas:
+        "cont1 imgc1 imgc2"
+        "cont2 imgc3 imgc3";
+    .cont1 {
+            grid-area: cont1;        
+    }
+    .cont2 {
+        grid-area: cont2;
+    }
+    .imgc1 {
+        grid-area: imgc1;
+    }
+    .imgc2 {
+        grid-area: imgc2;
+    }
+    .imgc3 {
+        grid-area: imgc3;
+        @extend %flex-center;
+    }
+    .pfinal {
+        text-decoration: underline;
+    }          
+                 
+    }
+}
+/*...............Que hacer..............*/
+h4 {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 40px;
+    @extend %base;
+}
+.titulocuatro {
+    padding: 5px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    @extend %base;
+}
+/*........MUSEOS........*/
+.museo {
+    font-weight: bold;
+    font-size: 30px;
+    @extend %base;
+    /*...EMPIEZA GRID...*/
+    display: grid;
+    width: 100%;
+    grid-row: auto auto auto auto;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "titulom imgm-1"
+        "titulom imgm-2"
+        "titulom imgm-3"
+        "pfinm pfinm";
+    .titulom {
+        grid-area: titulom;
+        height: 100%;
+        /*...COMBINACION GRID Y FLEX...*/
+        @extend %flex-center;
+        align-items: center;
+        font-size: 50px;
+        .ms1 {
+            margin: 20px;
+        }
+    }
+    .imgm-1 {
+        padding: 15px;
+        border-top: groove;
+        border-right: groove;
+        grid-area: imgm-1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .imgm-2 {
+        padding: 15px;
+        border-left: groove;
+        border-bottom: groove;
+        grid-area: imgm-2;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .imgm-3 {
+        padding: 15px;
+        border-top: groove;
+        border-bottom: groove;
+        grid-area: imgm-3;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .pfinm {
+        grid-area: pfinm;
+        @extend %flex-center;
+        .muspar {
+            padding: 20px;
+            line-height: 1.5;
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
+}
+/*......PARQUES......*/
+.parques {
+    font-weight: bold;
+    font-size: 30px;
+    @extend %base;
+    /*...EMPIEZA GRID...*/
+    display: grid;
+    width: 100%;
+    grid-row: auto auto auto auto;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "titulop imgp-1"
+        "titulop imgp-2"
+        "titulop imgp-3"
+        "pfinp pfinp";
+    .titulop {
+        grid-area: titulop;
+        height: 100%;
+        /*...COMBINACION GRID Y FLEX...*/
+        @extend %flex-center;
+        align-items: center;
+        font-size: 50px;
+        .pr1 {
+            margin: 20px;
+        }
+    }
+    .imgp-1 {
+        padding: 15px;
+        border-top: groove;
+        border-right: groove;
+        grid-area: imgp-1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .imgp-2 {
+        padding: 15px;
+        border-left: groove;
+        border-bottom: groove;
+        grid-area: imgp-2;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .imgp-3 {
+        padding: 15px;
+        border-top: groove;
+        border-bottom: groove;
+        grid-area: imgp-3;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .pfinp {
+        grid-area: pfinp;
+        @extend %flex-center;
+        .parqpar {
+            padding: 20px;
+            line-height: 1.5;
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
+            
+}
+/*...............Recorridos...............*/
+h5 {
+    color: rgb(7, 6, 6);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 8px;
+    padding: 10px;
+}
+.ptod {
+    @extend %base;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    .rec1 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 15px;
+        text-decoration: underline;
+    }
+    .rec11 {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 15px;
+    }
+    .imgrec {
+        margin: 25px;
+    }
+}
+/*...............Contacto...............*/
+h6 {
+    color: rgb(7, 6, 6);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.lrm {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.formu {
+    margin: 20px;
+    background-color: rgb(247, 238, 238);
+    padding: 10px;
+}
+/*...............Informacion...............*/
+.titu {
+    color: rgb(7, 6, 6);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tdo1 {
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+    .tit1 {
+        color: aliceblue;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 15px;
+    }
+    .rell1 {
+        color: aliceblue;
+        font-size: 20px;
+        font-weight: normal;
+        margin: 15px;
+    }
+}
+.tdo2 {
+    background-color: rgba(29, 29, 49, 0.87);
+    margin: 0;
+    padding: 10px;
+    .tit {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 15px;
+    }
+    .rell {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 15px;
+    }
+}
+.tdo3 {
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+}

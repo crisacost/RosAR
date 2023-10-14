@@ -1,0 +1,34 @@
+/*.....index.....*/
+.imgprincipal {
+    width: 100%;
+    height: 400px;
+}
+/*.....NavBS.....*/
+.conteiner-fluid {
+    height: 50px;
+    background-color: black;
+    padding: 10px;
+    list-style: none;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    @extend %flex-center;
+    .logo{
+    display: flex;
+    justify-content: flex-start;
+    }
+    .conteiner-fluid li a {
+    padding: 6px;
+    margin: 10px;
+    color: rgb(245, 243, 241);
+    text-decoration: none;
+    }
+}
+
+
+/*.....Que hacer.....*/
+.encabezado {
+    display: flex;
+    justify-content: space-evenly;
+}

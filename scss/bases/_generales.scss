@@ -1,0 +1,15 @@
+/*.........Reseteo.........*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: rgb(253, 251, 251);
+    color: black;
+}
+main {
+    min-height: 80vh;
+    display: grid;
+}
