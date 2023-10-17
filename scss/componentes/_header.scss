@@ -1,11 +1,14 @@
+header{ 
+    background-color: black;
+}
 /*.....index.....*/
+
 .imgprincipal {
     width: 100%;
     height: 400px;
 }
 /*.....NavBS.....*/
 .conteiner-fluid {
-    height: 50px;
     background-color: black;
     padding: 10px;
     list-style: none;
@@ -17,6 +20,7 @@
     .logo{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     }
     .conteiner-fluid li a {
     padding: 6px;

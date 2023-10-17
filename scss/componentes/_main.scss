@@ -12,6 +12,7 @@ h2 {
     font-weight: bold;
     font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .presentacion {
     padding: 20px;
     font-weight: bold;
@@ -45,8 +46,8 @@ h2 {
         text-decoration: underline;
     }          
                  
-    }
 }
+
 /*...............Que hacer..............*/
 h4 {
     padding: 10px;
@@ -242,6 +243,7 @@ h6 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .tdo1 {
+    color: white;
     background-color: black;
     margin: 0;
     padding: 10px;
@@ -259,7 +261,8 @@ h6 {
     }
 }
 .tdo2 {
-    background-color: rgba(29, 29, 49, 0.87);
+    color: black;
+    background-color: rgba(29, 29, 49, 0.959);
     margin: 0;
     padding: 10px;
     .tit {
@@ -274,7 +277,11 @@ h6 {
     }
 }
 .tdo3 {
+    color: white;
     background-color: black;
     margin: 0;
     padding: 10px;
+    a{
+        color: white;
+    }
 }

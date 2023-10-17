@@ -2,15 +2,42 @@
     .imgprincipal {
         display: none;
     }
+    .conteiner-fluid {
+        display: flex;
+        justify-content: end;
+        background-color: rgb(14, 13, 13);
+        align-items: center;
+
+    }
     .presentacion {
-        grid-row: auto auto auto auto;
+        width: 100%;
+        grid-row: auto auto auto auto auto;
         grid-column: 1fr 1fr;
         grid-template-areas:
             "cont1 cont1"
             "cont2 cont2"
-            "imgc1 imgc2"
-            "imgc3 imgc3"
-    }
+            "imgc1 imgc1"
+            "imgc2 imgc2"
+            "imgc3 imgc3";
+        .imgc1 {
+            grid-area: imgc1;
+            display: flex;
+            justify-content: start;
+            
+        }    
+        .imgc2 {
+            grid-area: imgc2;
+            display: flex;
+            justify-content: end;
+            
+        }
+        .imgc3 {
+            grid-area: imgc3;
+            display: flex;
+            justify-content: start;
+            
+        }
+    }        
     .parques {
         grid-row: auto auto auto auto auto;
         grid-column: 1fr;
@@ -37,19 +64,10 @@
 }
 
 @media screen and (max-width: 560px) {
-    .conteiner-fluid {
-        background-color: white;
-        padding: 5px;
-        list-style: none;
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .conteiner-fluid li a {
-        color: black;
+   
 
-    }
+    
+    
     .foot1 {
         background-color: white;
 

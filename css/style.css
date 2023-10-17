@@ -1,5 +1,5 @@
 /*.....Extends.....*/
-.conteiner-fluid, h2 .presentacion .imgc3, .museo .titulom, .museo .pfinm, .parques .titulop, .parques .pfinp {
+.conteiner-fluid, .presentacion .imgc3, .museo .titulom, .museo .pfinm, .parques .titulop, .parques .pfinp {
   display: flex;
   justify-content: center; }
 
@@ -23,6 +23,9 @@ main {
   min-height: 80vh;
   display: grid; }
 
+header {
+  background-color: black; }
+
 /*.....index.....*/
 .imgprincipal {
   width: 100%;
@@ -30,7 +33,6 @@ main {
 
 /*.....NavBS.....*/
 .conteiner-fluid {
-  height: 50px;
   background-color: black;
   padding: 10px;
   list-style: none;
@@ -40,7 +42,8 @@ main {
   font-size: 13px; }
   .conteiner-fluid .logo {
     display: flex;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    align-items: center; }
   .conteiner-fluid .conteiner-fluid li a {
     padding: 6px;
     margin: 10px;
@@ -65,29 +68,30 @@ h2 {
   font-weight: bold;
   font-size: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
-  h2 .presentacion {
-    padding: 20px;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1.5;
-    /*...DESDE ACA GRID...*/
-    display: grid;
-    width: 100%;
-    grid-row: auto auto;
-    grid-column: 1fr 1fr 1fr;
-    grid-template-areas: "cont1 imgc1 imgc2" "cont2 imgc3 imgc3"; }
-    h2 .presentacion .cont1 {
-      grid-area: cont1; }
-    h2 .presentacion .cont2 {
-      grid-area: cont2; }
-    h2 .presentacion .imgc1 {
-      grid-area: imgc1; }
-    h2 .presentacion .imgc2 {
-      grid-area: imgc2; }
-    h2 .presentacion .imgc3 {
-      grid-area: imgc3; }
-    h2 .presentacion .pfinal {
-      text-decoration: underline; }
+
+.presentacion {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+  /*...DESDE ACA GRID...*/
+  display: grid;
+  width: 100%;
+  grid-row: auto auto;
+  grid-column: 1fr 1fr 1fr;
+  grid-template-areas: "cont1 imgc1 imgc2" "cont2 imgc3 imgc3"; }
+  .presentacion .cont1 {
+    grid-area: cont1; }
+  .presentacion .cont2 {
+    grid-area: cont2; }
+  .presentacion .imgc1 {
+    grid-area: imgc1; }
+  .presentacion .imgc2 {
+    grid-area: imgc2; }
+  .presentacion .imgc3 {
+    grid-area: imgc3; }
+  .presentacion .pfinal {
+    text-decoration: underline; }
 
 /*...............Que hacer..............*/
 h4 {
@@ -248,6 +252,7 @@ h6 {
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
 .tdo1 {
+  color: white;
   background-color: black;
   margin: 0;
   padding: 10px; }
@@ -263,7 +268,8 @@ h6 {
     margin: 15px; }
 
 .tdo2 {
-  background-color: rgba(29, 29, 49, 0.87);
+  color: black;
+  background-color: rgba(29, 29, 49, 0.959);
   margin: 0;
   padding: 10px; }
   .tdo2 .tit {
@@ -276,9 +282,12 @@ h6 {
     margin: 15px; }
 
 .tdo3 {
+  color: white;
   background-color: black;
   margin: 0;
   padding: 10px; }
+  .tdo3 a {
+    color: white; }
 
 .foot1 {
   background-color: #1c3a3a;
@@ -295,10 +304,28 @@ h6 {
 @media screen and (max-width: 950px) {
   .imgprincipal {
     display: none; }
+  .conteiner-fluid {
+    display: flex;
+    justify-content: end;
+    background-color: #0e0d0d;
+    align-items: center; }
   .presentacion {
-    grid-row: auto auto auto auto;
+    width: 100%;
+    grid-row: auto auto auto auto auto;
     grid-column: 1fr 1fr;
-    grid-template-areas: "cont1 cont1" "cont2 cont2" "imgc1 imgc2" "imgc3 imgc3"; }
+    grid-template-areas: "cont1 cont1" "cont2 cont2" "imgc1 imgc1" "imgc2 imgc2" "imgc3 imgc3"; }
+    .presentacion .imgc1 {
+      grid-area: imgc1;
+      display: flex;
+      justify-content: start; }
+    .presentacion .imgc2 {
+      grid-area: imgc2;
+      display: flex;
+      justify-content: end; }
+    .presentacion .imgc3 {
+      grid-area: imgc3;
+      display: flex;
+      justify-content: start; }
   .parques {
     grid-row: auto auto auto auto auto;
     grid-column: 1fr;
@@ -311,16 +338,6 @@ h6 {
     grid-template-areas: "titulom" "imgm-1" "imgm-2" "imgm-3" "pfinm"; } }
 
 @media screen and (max-width: 560px) {
-  .conteiner-fluid {
-    background-color: white;
-    padding: 5px;
-    list-style: none;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; }
-  .conteiner-fluid li a {
-    color: black; }
   .foot1 {
     background-color: white; }
   .foot2 {
