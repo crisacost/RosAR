@@ -3,8 +3,38 @@ h1 {
     padding: 10px;
     font-weight: bold;
     font-size: 80px;
-    @extend %base
+    @extend %base;
+    animation: 
+      changer-color 3s ease-in-out alternate,
+      move-tit 2s linear alternate;
+    animation-iteration-count: 4;
+ 
+    
+    
 }
+h1 span{
+    color:  rgba(241, 106, 33, 0.904);
+}
+
+@keyframes changer-color{
+    from{
+         background-color: black;
+    }
+    to{
+        background-color:  rgba(241, 112, 42, 0.911);
+    }
+}
+@keyframes move-tit{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+         transform: translateX(250px);
+    }
+}
+
+
+
 h2 {
     margin: 15px;
     color: black;
@@ -13,6 +43,7 @@ h2 {
     font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .presentacion {
     padding: 20px;
     font-weight: bold;
@@ -25,7 +56,8 @@ h2 {
     grid-column: 1fr 1fr 1fr;
     grid-template-areas:
         "cont1 imgc1 imgc2"
-        "cont2 imgc3 imgc3";
+        "cont2 imgc3 imgc4";
+    transition: 2s;
     .cont1 {
             grid-area: cont1;        
     }
@@ -33,22 +65,56 @@ h2 {
         grid-area: cont2;
     }
     .imgc1 {
+        padding: 10px;
+        border-left: groove rgba(241, 106, 33, 0.904);
         grid-area: imgc1;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .imgc1:hover {
+        transform: scale(1.1);
     }
     .imgc2 {
+        padding: 10px;
+        border-top: groove rgba(241, 110, 39, 0.911);
         grid-area: imgc2;
+        display: flex;
+        justify-content: center;
+    
+    }
+    .imgc2:hover {
+        transform: scale(1.1);
     }
     .imgc3 {
+        padding: 10px;
+        border-bottom: groove rgba(241, 112, 42, 0.911);
         grid-area: imgc3;
-        @extend %flex-center;
+        display: flex;
+        justify-content: center;
+    }
+    .imgc3:hover {
+        transform: scale(1.1);
+    }
+    .imgc4{
+        padding: 10px;
+        border-right: groove rgba(240, 107, 36, 0.89);
+        grid-area: imgc4;
+        display: flex;
+        justify-content: center;
+    }
+    .imgc4:hover {
+        transform: scale(1.1);
     }
     .pfinal {
         text-decoration: underline;
+        
     }          
                  
 }
 
 /*...............Que hacer..............*/
+
 h4 {
     padding: 10px;
     font-weight: bold;
@@ -76,7 +142,9 @@ h4 {
         "titulom imgm-2"
         "titulom imgm-3"
         "pfinm pfinm";
+    transition: 2s;    
     .titulom {
+        text-decoration: underline rgba(241, 112, 42, 0.911);
         grid-area: titulom;
         height: 100%;
         /*...COMBINACION GRID Y FLEX...*/
@@ -86,7 +154,12 @@ h4 {
         .ms1 {
             margin: 20px;
         }
+        .ms1:hover {
+        transform: scale(1.1);
+        }
     }
+
+   
     .imgm-1 {
         padding: 15px;
         border-top: groove;
@@ -94,6 +167,10 @@ h4 {
         grid-area: imgm-1;
         display: flex;
         justify-content: flex-end;
+
+    }
+   .imgm-1:hover {
+        transform: translate(-30px)
     }
     .imgm-2 {
         padding: 15px;
@@ -103,13 +180,20 @@ h4 {
         display: flex;
         justify-content: flex-start;
     }
+    .imgm-2:hover {
+        transform: translate(-30px)
+    }
+    
     .imgm-3 {
         padding: 15px;
-        border-top: groove;
+        border-right: groove;
         border-bottom: groove;
         grid-area: imgm-3;
         display: flex;
         justify-content: flex-end;
+    }
+    .imgm-3:hover {
+        transform: translate(-30px)
     }
     .pfinm {
         grid-area: pfinm;
@@ -137,7 +221,9 @@ h4 {
         "titulop imgp-2"
         "titulop imgp-3"
         "pfinp pfinp";
+    transition: 2s;
     .titulop {
+        text-decoration: underline rgba(241, 112, 42, 0.911);
         grid-area: titulop;
         height: 100%;
         /*...COMBINACION GRID Y FLEX...*/
@@ -147,7 +233,11 @@ h4 {
         .pr1 {
             margin: 20px;
         }
+        .pr1:hover {
+            transform: scale(1.1);
+        }
     }
+
     .imgp-1 {
         padding: 15px;
         border-top: groove;
@@ -155,6 +245,9 @@ h4 {
         grid-area: imgp-1;
         display: flex;
         justify-content: flex-end;
+    }
+    .imgp-1:hover {
+        transform: translate(-30px)
     }
     .imgp-2 {
         padding: 15px;
@@ -164,13 +257,19 @@ h4 {
         display: flex;
         justify-content: flex-start;
     }
+    .imgp-2:hover {
+        transform: translate(-30px)
+    }
     .imgp-3 {
         padding: 15px;
-        border-top: groove;
+        border-right: groove;
         border-bottom: groove;
         grid-area: imgp-3;
         display: flex;
         justify-content: flex-end;
+    }
+    .imgp-3:hover {
+        transform: translate(-30px)
     }
     .pfinp {
         grid-area: pfinp;
@@ -191,20 +290,40 @@ h5 {
     font-weight: bold;
     font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 8px;
-    padding: 10px;
+    margin: 4px;
+    padding: 5px;
+    animation: 
+      changer-color 3s ease-in-out alternate,
+      move-tit 2s linear alternate;
+    animation-iteration-count: 4;
+}
+@keyframes changer-color{
+    from{
+         background-color: white;
+    }
+    to{
+        background-color: rgba(241, 112, 42, 0.911);
+    }
+}
+@keyframes move-tit{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+         transform: translateX(250px);
+    }
 }
 .ptod {
     @extend %base;
     font-weight: bold;
-    font-size: 30px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
+    transition: 2s;
     .rec1 {
         font-size: 30px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: 15px;
-        text-decoration: underline;
+         text-decoration: overline underline rgba(241, 112, 42, 0.911);
     }
     .rec11 {
         font-size: 20px;
@@ -214,9 +333,13 @@ h5 {
     .imgrec {
         margin: 25px;
     }
+    .imgrec:hover{
+        transform: scale(1.1);
+    }
 }
 /*...............Contacto...............*/
 h6 {
+    margin: 7px;
     color: rgb(7, 6, 6);
     font-style: normal;
     font-weight: bold;
@@ -231,11 +354,12 @@ h6 {
 
 .formu {
     margin: 20px;
-    background-color: rgb(247, 238, 238);
+    background-color: rgba(241, 163, 118, 0.295);
     padding: 10px;
 }
 /*...............Informacion...............*/
 .titu {
+    margin: 12px;
     color: rgb(7, 6, 6);
     font-style: normal;
     font-weight: bold;
@@ -248,32 +372,38 @@ h6 {
     margin: 0;
     padding: 10px;
     .tit1 {
-        color: aliceblue;
+        color: rgba(241, 112, 42, 0.911);
         font-size: 30px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin: 15px;
+        margin: 7px;
     }
     .rell1 {
         color: aliceblue;
         font-size: 20px;
         font-weight: normal;
-        margin: 15px;
+        
+    }
+    .under {
+         text-decoration: underline rgba(241, 112, 42, 0.911);
     }
 }
 .tdo2 {
-    color: black;
-    background-color: rgba(29, 29, 49, 0.959);
+    color: white;
+    background-color: black;
     margin: 0;
     padding: 10px;
     .tit {
+        color: rgba(241, 112, 42, 0.911);
         font-size: 30px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin: 15px;
+        margin: 10px;
     }
     .rell {
         font-size: 20px;
         font-weight: normal;
-        margin: 15px;
+    }
+     .under {
+         text-decoration: underline rgba(241, 112, 42, 0.911);
     }
 }
 .tdo3 {

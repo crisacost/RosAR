@@ -443,6 +443,7 @@ h6 {
 
 /*..........MEDIA QUERY..........*/
 @media screen and (max-width: 950px) {
+   
     .imgprincipal {
         display: none;
     }
