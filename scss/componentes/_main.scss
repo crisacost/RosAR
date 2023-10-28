@@ -7,10 +7,7 @@ h1 {
     animation: 
       changer-color 3s ease-in-out alternate,
       move-tit 2s linear alternate;
-    animation-iteration-count: 4;
- 
-    
-    
+    animation-iteration-count: 4;  
 }
 h1 span{
     color:  rgba(241, 106, 33, 0.904);
@@ -29,12 +26,9 @@ h1 span{
         transform: translateX(0);
     }
     100%{
-         transform: translateX(250px);
+         transform: translateX(150px);
     }
 }
-
-
-
 h2 {
     margin: 15px;
     color: black;
@@ -70,7 +64,7 @@ h2 {
         grid-area: imgc1;
         display: flex;
         justify-content: center;
-        
+    
     }
     .imgc1:hover {
         transform: scale(1.1);
@@ -332,6 +326,7 @@ h5 {
     }
     .imgrec {
         margin: 25px;
+        box-shadow: 4px 4px 8px white ;
     }
     .imgrec:hover{
         transform: scale(1.1);
@@ -356,6 +351,20 @@ h6 {
     margin: 20px;
     background-color: rgba(241, 163, 118, 0.295);
     padding: 10px;
+    .festi{
+          font-size: 20px;
+          line-height: 20px;
+          font-weight: bold;
+    }
+    .fend{
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: flex-start;
+        color: rgba(241, 112, 42, 0.911);
+
+    }
 }
 /*...............Informacion...............*/
 .titu {

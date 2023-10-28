@@ -1,5 +1,6 @@
 header{ 
     background-color: black;
+   
 }
 /*.....index.....*/
 
@@ -26,18 +27,19 @@ header{
     justify-content: flex-start;
     align-items: center;
     }
-    .container-fluid li a :hover {
-    color: white;
-    background-color:  rgba(241, 106, 33, 0.904);
-    border-radius: 50%;
-    }
+   
+    
     .container-fluid li a {
     padding: 6px;
     margin: 10px;
     color: rgb(245, 243, 241);
     text-decoration: none;
     }
-   
+    .container-fluid li a:hover {
+    color: white;
+    background-color:  rgba(241, 106, 33, 0.904);
+    border-radius: 35%;
+    }
 }
 
 

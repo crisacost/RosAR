@@ -1,15 +1,11 @@
 @media screen and (max-width: 980px) {
-    
-    .header{
-        background-image: url(../img/PORTADA.jpg);
-        background-size: cover;
+    .imgprincipal{
+        .xl{
+            width: 100%;
+            height: 180px;
+        }
     }
-    .imgprincipal {
-        .xl { 
-            display: none;
-            }
     
-    }
     .container-fluid {
         display: flex;
         justify-content: end;
@@ -36,7 +32,6 @@
         }    
         .imgc2 {
             grid-area: imgc2;
-
             display: flex;
             justify-content: end;
             
@@ -78,7 +73,18 @@
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 530px) {
+    .imgprincipal {
+        .xl { 
+            display: none;
+            }
+        .sm{
+            display: inline-block;
+            width: 100%;
+            height: 180px;
+        }
+    
+    }
     
     .foot1 {
         background-color: white;
